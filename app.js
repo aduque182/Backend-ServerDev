@@ -17,6 +17,8 @@ app.use(bodyParser.json())
 var appRoutes = require('./routes/app');
 var usuarioRoutes = require('./routes/usuario');
 var hospitalRoutes = require('./routes/hospital');
+var medicoRoutes = require('./routes/medico');
+var busquedaRoutes = require('./routes/busqueda');
 var loginRoutes = require('./routes/login');
 
 //Conexion a la base de datos
@@ -29,6 +31,8 @@ console.log('Base de datos: \x1b[32m%s\x1b[0m', 'online ');
 //Rutas
 app.use('/usuario',usuarioRoutes );
 app.use('/hospital',hospitalRoutes );
+app.use('/medico',medicoRoutes);
+app.use('/busqueda',busquedaRoutes);
 app.use('/login',loginRoutes );
 app.use('/',appRoutes );
 
